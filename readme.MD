@@ -8,18 +8,17 @@ Este é um projeto fullstack para acompanhar e visualizar treinos esportivos a p
 - Extração dos dados de treino (tempo, distância, frequência cardíaca, etc.)
 - Armazenamento dos dados em um banco de dados relacional
 - API RESTful para acessar os treinos
-- Frontend em React com gráficos interativos
-- Visualização em lista e detalhes de cada treino
+- Interface em Streamlit para upload, visualização e gráficos dos treinos
 
 ---
 
 ## ⚙️ Tecnologias
 
 - **Backend**: [FastAPI](https://fastapi.tiangolo.com/)
-- **Frontend**: [React](https://reactjs.org/) com [Vite](https://vitejs.dev/)
+- **Frontend**: [Streamlit](https://streamlit.io/)
 - **Banco de Dados**: SQLite (local) | Suporte para PostgreSQL
 - **ORM**: SQLModel
-- **Gráficos**: Recharts (no frontend)
+- **Gráficos**: Altair / Matplotlib / Plotly via Streamlit
 - **Parser `.fit`**: [`fitparse`](https://github.com/dtcooper/python-fitparse)
 
 ---
@@ -29,7 +28,6 @@ Este é um projeto fullstack para acompanhar e visualizar treinos esportivos a p
 ### Pré-requisitos
 
 - Python 3.11+
-- Node.js 18+
 - Git
 
 ### 1. Clone o repositório
@@ -55,17 +53,16 @@ uvicorn app.main:app --reload
 A API estará disponível em: [http://localhost:8000](http://localhost:8000)  
 Documentação interativa: [http://localhost:8000/docs](http://localhost:8000/docs)
 
-### 3. Configure o frontend (React + Vite)
+### 3. Rode o frontend (Streamlit)
 
-Abra outro terminal:
+Em outro terminal:
 
 ```bash
 cd frontend
-npm install
-npm run dev
+streamlit run app.py
 ```
 
-O frontend estará disponível em: [http://localhost:5173](http://localhost:5173)
+A interface estará disponível em: [http://localhost:8501](http://localhost:8501)
 
 ---
 
@@ -76,18 +73,15 @@ workouts-tracker/
 │
 ├── backend/              # Backend com FastAPI
 │   ├── app/
-│   │   ├── api/          # Rotas da API
-│   │   ├── models/       # Modelos do banco de dados
-│   │   ├── services/     # Lógica de negócio e utilitários
-│   │   └── main.py       # Ponto de entrada do backend
+│   │   ├── api/
+│   │   ├── models/
+│   │   ├── services/
+│   │   └── main.py
 │   └── requirements.txt
 │
-├── frontend/             # Frontend com React e Vite
-│   ├── src/
-│   │   ├── components/   # Componentes reutilizáveis
-│   │   ├── pages/        # Páginas da aplicação
-│   │   └── App.tsx
-│   └── package.json
+├── frontend/             # Frontend com Streamlit
+│   ├── app.py            # App principal do Streamlit
+│   └── requirements.txt
 │
 └── README.md             # Este arquivo
 ```
