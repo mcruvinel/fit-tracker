@@ -96,7 +96,6 @@ workouts-tracker/
 
 ## 🔧 Melhorias Futuras
 
-- Autenticação de usuários
 - Busca e filtros por tipo de treino, data e métricas
 - Exportação de dados e gráficos
 - Suporte a arquivos `.gpx` e `.tcx`
