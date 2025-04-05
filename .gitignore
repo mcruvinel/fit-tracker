@@ -1,0 +1,61 @@
+# Arquivos de bytecode Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambiente virtual
+venv/
+env/
+.venv/
+
+# Arquivos de configuração do Python
+*.pyc
+*.pyo
+*.pyd
+
+# Diretórios e arquivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos de cache e logs
+*.log
+*.cache
+.pytest_cache/
+
+# Pacotes e builds
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# Arquivos de ambiente
+.env
+.venv
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de teste e coverage
+htmlcov/
+.coverage
+.coverage.*
+*,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Arquivos de output e dados
+*.csv
+*.json
+*.xlsx
+*.db
+*.sqlite3
+
+# Arquivos de documentação
+docs/_build/
